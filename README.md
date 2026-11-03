@@ -23,6 +23,15 @@ Prebuilt archives for **Linux, macOS and Windows** (amd64 and arm64) are on the
 [releases page](https://github.com/akhenak/pdgfr/releases). They are fully
 static and embed everything.
 
+Homebrew (macOS):
+
+```sh
+brew install akhenakh/tap/pdgfr
+```
+
+Homebrew on Linux is not supported; Linux users install the release tarball
+directly.
+
 Or build it (Go 1.27 or newer):
 
 ```sh
@@ -222,5 +231,7 @@ Unlike `pdg`, the shipped binary embeds no GPL component.
 ## Releasing
 
 Push a tag (`vX.Y.Z`). `.github/workflows/release.yml` runs GoReleaser for
-Linux, macOS and Windows on amd64/arm64 and attests the archives with GitHub
-build provenance.
+Linux, macOS and Windows on amd64/arm64, attests the archives with GitHub
+build provenance, then `scripts/brew-bump.sh` updates
+`akhenakh/homebrew-tap` with a macOS-only formula. Configure a
+`TAP_GITHUB_TOKEN` repository secret with `contents: write` on the tap.
