@@ -39,6 +39,18 @@ make build              # -> ./pdgfr
 go build -trimpath -o pdgfr ./cmd/pdgfr
 ```
 
+### Verifying a release
+
+Release archives carry [build provenance](https://docs.github.com/en/actions/security-guides/using-artifact-attestations-to-establish-provenance-for-builds)
+signed by this repository's release workflow. Check a downloaded archive with:
+
+```sh
+gh attestation verify pdgfr_Linux_x86_64.tar.gz --repo akhenakh/pdgfr
+```
+
+The same provenance covers the macOS archives the Homebrew formula installs.
+`pdgfr_<version>_checksums.txt` lists the SHA-256 of every archive.
+
 ## Use
 
 ```sh
