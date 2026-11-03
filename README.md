@@ -20,7 +20,7 @@ The model is **Brindille** by Eddy Bordi, a French TTS that runs on the
 ## Install
 
 Prebuilt archives for **Linux, macOS and Windows** (amd64 and arm64) are on the
-[releases page](https://github.com/akhenak/pdgfr/releases). They are fully
+[releases page](https://github.com/akhenakh/pdgfr/releases). They are fully
 static and embed everything.
 
 Homebrew (macOS):
