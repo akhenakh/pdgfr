@@ -29,8 +29,14 @@ Homebrew (macOS):
 brew install akhenakh/tap/pdgfr
 ```
 
-Homebrew on Linux is not supported; Linux users install the release tarball
-directly.
+Homebrew on Linux is not supported. Arch Linux users can install the
+[AUR package](https://aur.archlinux.org/packages/pdgfr) (builds from source):
+
+```sh
+yay -S pdgfr           # or: paru -S pdgfr
+```
+
+Other Linux users install the release tarball directly.
 
 Or build it (Go 1.27 or newer):
 
